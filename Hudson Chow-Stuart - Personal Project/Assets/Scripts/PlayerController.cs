@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
         transform.Rotate(Vector3.up, horizontalInput * rotspeed * Time.deltaTime);
-        playerRb.AddRelativeForce(Vector3.forward * verticalInput * speed);
+        playerRb.AddRelativeForce(Vector3.forward * verticalInput * speed, ForceMode.Acceleration);
     }
 }
