@@ -20,4 +20,10 @@ public class PlayerController : MonoBehaviour
 
         playerRb.AddForce(focalPoint.forward * forwardInput * speed);
     }
+
+    public void HaultMovement()
+    {
+        playerRb.isKinematic = true;
+        playerRb.isKinematic = false;
+    }
 }
