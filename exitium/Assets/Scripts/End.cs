@@ -83,8 +83,12 @@ public class End : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    if (msgi == msg.Length)
+                    if (msgi == msg.Length - 1)
+                    {
                         Application.Quit();
+                        Application.LoadLevel(Application.loadedLevel);
+                    }
+                        
                     isDone = false;
                     triggerLock = false;
                     msgi++;
