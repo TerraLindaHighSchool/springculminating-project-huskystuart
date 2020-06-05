@@ -7,9 +7,6 @@ using UnityEngine;
 public class End : MonoBehaviour
 {
 
-    [DllImport("datamine.dll", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.StdCall)]
-    [return: MarshalAs(UnmanagedType.LPStr)]
-    public static extern string GetFirstName();
 
     public Transform dialogBox;
     public Transform player;
@@ -23,7 +20,7 @@ public class End : MonoBehaviour
         ,"i know you hate me, that's my place in your little world", "no matter what you do, you can't get rid of me. face it: i am to you the city upon the hill; and now, you have nowhere else to run to.",
         "lux in tenebris non fulgebunt quod tenebrae eam comprehenderunt.","you can't do anything, you're worthless.", "what're you gonna say? huh?", "I love you.", "what? no. no. no.",
         "69206861746520796f7572206775747320796f752073686f756c6420676f206265erolod ed onod inna M et796f6e6420646561746820616e6420746f206120706c616365206f6620737566666572696e67",
-        MakeSpooky(GetFirstName()) + "!!!!!" };
+        "cain" + "!!!!!" };
 
     public int switch1 = 7;
     
